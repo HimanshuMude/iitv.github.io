@@ -15,14 +15,12 @@ a{
 
 .navlist{
     width: 100%;
-    height: 50px;
     padding: 5px 10vw;
     background-color: rgba(18, 18, 39, 0.8);
     color: white;
     font-size: 20px;
     position: fixed;
     z-index: 10;
-    
 }
 
 .navlist ul{
@@ -33,8 +31,9 @@ a{
 }
 
 
-.navlist ul li{
-    margin-top: 8px;
+.navlist ul li:first-child{
+    margin-right: auto;
+    
 }
 .navlist ul h4{
     font-family: serif;
@@ -43,19 +42,18 @@ a{
 .navlist ul a{
     margin-left: 20px;
     font-size: 20px; 
-
 }
 
 .navlist ul a:hover{
     color: #f80;
 }
-/* .navlist ul li img{
+.navlist ul li img{
     width: auto;
     height: 75px;
     margin-right: 20px;
     margin-left: 0;
     
-} */
+}
 
 /* Container */
 
@@ -73,9 +71,10 @@ a{
 
 .container h1{
     font-family: serif;
-    font-size: 45px;
+    font-size: 100px;
     margin-bottom: 20px;
     word-spacing: 5px;
+    color: #f80;
 }
 
 .container p{
@@ -98,65 +97,6 @@ a{
     font-size: 20px;
     font-weight: bold;
 }
-
-/* ContentBox */
-
-.contentBox{
-    width: 80%;
-    margin: auto;
-}
-
-.contentBox>h2{
-    text-align: center;
-    color: #f80;
-    margin: 20px;
-}
-
-.contentBox>h2::before, .contentBox>h2::after{
-    content: "--------";
-    letter-spacing: -5px;
-    margin: 0 10px ;
-}
-
-.contentBox .row{
-    display: flex;
-    justify-content: space-between;
-}
-
-.contentBox .column{
-    width: 32%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
-.contentBox img{
-    width: 100%;
-    height: auto;
-}
-
-.contentBox .column a{
-    cursor: default;
-}
-
-.contentBox .column a:last-child{
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 100%;
-    left: 0;
-    bottom: 0;
-    background: #ff8800c3;
-    text-align: center;
-    line-height: 15vw;
-    font-size: 3vw;
-    
-}
-
-.contentBox .column:hover a:last-child{
-    height: 100%;
-    top: 0;
-}
-
 /* Footer */
 
 footer{
@@ -190,19 +130,39 @@ footer ul li{
     justify-content: center;
 }
 
-@media (max-width:600px){
-    .contentBox .row{
-        flex-direction: column;
-    }
-    .contentBox .column{
-        width: 100%;
-        margin: 0 auto;
+/* About */
 
-    }
+.about>p{
+    font-family: serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    word-spacing: 5px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
-    .contentBox .column a:last-child{
-        line-height:45vw ;
-        font-size: 6vw;
-    }
-    
+.about>h2{
+    text-align: center;
+    color: #f80;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.about ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.about li{
+    margin: 8px;
+    list-style: none;
+    justify-content: center;
+    font-size: 25px;
+}
+.about li:hover{
+    color: #f80;
+    cursor: default;
 }
