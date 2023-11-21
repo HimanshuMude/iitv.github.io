@@ -69,6 +69,7 @@ a{
     background-repeat: no-repeat;
     text-align: center;
     color: white;
+    
 }
 
 .container h1{
@@ -76,6 +77,13 @@ a{
     font-size: 45px;
     margin-bottom: 20px;
     word-spacing: 5px;
+}
+
+.container img{
+    margin-top: -200px;
+    width: 200px;
+    height: 200px;
+
 }
 
 .container p{
@@ -191,6 +199,11 @@ footer ul li{
 }
 
 @media (max-width:600px){
+
+    .container img{
+        display: none;
+    }
+
     .contentBox .row{
         flex-direction: column;
     }
