@@ -1,4 +1,4 @@
-document.getElementById("admissionFormBtn").addEventListener("click", function(event) {
+document.getElementById("admissionFormBtn").addEventListener("click", async function(event) {
     console.log("Form submitted");
     event.preventDefault(); // Prevent form submission
     
@@ -28,14 +28,13 @@ document.getElementById("admissionFormBtn").addEventListener("click", function(e
     // document.getElementsByClassName("form")[0].setAttribute("display", "none") 
     // document.getElementsByClassName("container")[0].innerHTML = "<h1>Form submitted successfully</h1>"
 
+    
+    swal("Form submitted successfully");
 
-    saveAs(blob, "enroll.txt")
 
-
-    alert("Form submitted successfully");
-
-    // Perform form submission
-    // You can add your own logic here, such as sending the form data to a server or displaying a success message
+    setTimeout(function() {
+        saveAs(blob, "enroll.txt");
+    }, 2000);
     
     // Reset form
     document.getElementById("admissionForm").reset();
