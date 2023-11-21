@@ -1,6 +1,6 @@
 document.getElementById("btn").addEventListener("click", function() {
     //redirect to enroll.html
-    window.location.href = "/Enroll.html";
+    window.location.href = "./Enroll.html";
 
     });
     let arr=document.getElementsByClassName("links");
