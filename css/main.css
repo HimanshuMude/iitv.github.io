@@ -1,0 +1,201 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Gothic",sans-serif;
+    transition: 0.4s;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navbar */
+
+.navlist{
+    width: 100%;
+    padding: 5px 10vw;
+    background-color: rgba(18, 18, 39, 0.8);
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    z-index: 10;
+}
+
+.navlist ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.navlist ul li:first-child{
+    margin-right: auto;
+    
+}
+.navlist ul h4{
+    font-family: serif;
+}
+
+.navlist ul a{
+    margin-left: 20px;
+    font-size: 20px; 
+}
+
+.navlist ul a:hover{
+    color: #f80;
+}
+.navlist ul li img{
+    width: auto;
+    height: 75px;
+    margin-right: 20px;
+    margin-left: 0;
+    
+}
+
+/* Container */
+
+.container{
+    width: 100%;
+    height: 80vh;
+    padding-top: 30vh;
+    background-image: linear-gradient(#222222c3,#232323c3),url("../images/campus.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.container h1{
+    font-family: serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+    word-spacing: 5px;
+}
+
+.container p{
+    margin-bottom: 30px;
+    letter-spacing: 2.5px;
+    font-size: 20px;
+}
+
+.container button{
+    padding: 10px;
+    background: transparent;
+    /* border-radius: 7px; */
+    border: 1px solid #f80;
+
+}
+.container button:hover{
+    background: #f80;
+}
+.container button a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ContentBox */
+
+.contentBox{
+    width: 80%;
+    margin: auto;
+}
+
+.contentBox>h2{
+    text-align: center;
+    color: #f80;
+    margin: 20px;
+}
+
+.contentBox>h2::before, .contentBox>h2::after{
+    content: "--------";
+    letter-spacing: -5px;
+    margin: 0 10px ;
+}
+
+.contentBox .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentBox .column{
+    width: 32%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.contentBox img{
+    width: 100%;
+    height: auto;
+}
+
+.contentBox .column a:last-child{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    background: #ff8800c3;
+    text-align: center;
+    line-height: 15vw;
+    font-size: 3vw;
+}
+
+.contentBox .column:hover a:last-child{
+    height: 100%;
+    top: 0;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 40px;
+    background: #ccc;
+}
+
+footer>h2{
+
+    text-align: center;
+    color: #f80;
+    padding: 10px;
+    /* margin: 20px; */
+}
+footer>h5{
+    text-align: center;
+    padding-bottom: 10px;
+    /* color: #f80; */
+    /* margin: 20px; */
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+
+footer ul li{
+    margin: 8px;
+    list-style: none;
+    justify-content: center;
+}
+
+@media (max-width:600px){
+    .contentBox .row{
+        flex-direction: column;
+    }
+    .contentBox .column{
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .contentBox .column a:last-child{
+        line-height:45vw ;
+        font-size: 6vw;
+    }
+    
+}
